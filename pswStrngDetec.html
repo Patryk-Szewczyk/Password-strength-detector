@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" lang="PL-pl" />
+        <title>Password strength detector</title>
+        <link rel="stylesheet" href="pswStrngDetec.css" text="type/css" />
+    </head>
+    <body>
+        
+        <div class="content-body">
+            <div class="detector-dimension">
+                <div class="detector-proper">
+                    <div class="detector-title-dimension">
+                        <div class="detector-title-proper">password strength detector</div>
+                    </div>
+                    <div class="detector-passwordCreate">
+                        <div class="detector-detector-passwordCreate-subTitle-dimension">
+                            <div class="detector-detector-passwordCreate-subTitle-proper">write your password:</div>
+                        </div>
+                        <div class="detector-passwordCreate-input-dimension">
+                            <input id="pas" type="password" class="detector-detector-passwordCreate-input-proper" />
+                        </div>
+                    </div>
+                    <div class="detector-passwordCheck">
+                        <div class="detector-passwordCheck-info">
+                            <div class="youPassword-value counter"></div>
+                            <div class="passwordStrength-group">
+                                <div class="passwordStrength-group-oneBlock">
+                                    <div class="youPassword-strength counter"></div>
+                                </div>
+                                <div class="passwordStrength-group-twoBlock">
+                                    <div class="strengthBar-body">
+                                        <div class="strengthBar-meter"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="youPassword-length counter"></div>
+                            <div class="smallLetter-counter counter"></div>
+                            <div class="bigLetter-counter counter"></div>
+                            <div class="number-counter counter"></div>
+                            <div class="specialSign-counter counter"></div>
+                            <div class="addinInf-block">
+                                <div class="addinInf-title">Additional info:</div>
+                                <div class="addinInf-button">
+                                    <div class="squareArrow"></div>
+                                </div>
+                            </div>
+                            <div class="additional-info">
+                                <div class="bigLetter-bonus counter"></div>
+                                <div class="number-bonus counter"></div>
+                                <div class="specialSign-bonus counter"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="pswStrngDetec.js"></script>
+    </body>
+</html>
