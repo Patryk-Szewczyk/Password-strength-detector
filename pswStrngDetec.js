@@ -93,6 +93,7 @@ let password_Meter_Width = 0;
 let password_Meter_HslHue = 0;
 let hue_OnePercent = 0;
 
+// Komputer / laptop:
 password_Input.addEventListener('keydown', (event) => {
     // MEGA WAŻNE: trzeba wyznaczyć jake klawisze aktywują funkcję, w przeciwnym razie, kiedy będizemy wciskali shif, 
     // aby wpisać dużą litrę, do do licznika zostaną dodane dwie 1, gdyż aby uzyskać dużą literę wciska się shift i literę: (shift + k). Jako że shift w tym przypadku 
@@ -113,6 +114,25 @@ password_Input.addEventListener('keydown', (event) => {
         }
     }
 }, false);
+
+// Urządzenie mobilne:
+password_Input.addEventListener('touchstart', (event) => {
+    let key = event.key;
+    for (a = 0; a < allActiveSigns.length; a++) {
+        if (key == allActiveSigns[a]) {
+            preventKeypress = false;
+            setTimeout( () => {
+                checkPasswordKeyGroup();
+            }, 1);
+            setTimeout( () => {
+                checkPasswordAllKeys();
+            }, 2);
+          // Kasowanie hasła za pomocą bocznych klaswiszy
+        } else if (key === "ArrowLeft" || key === "ArrowRight" || key === "ArrowUp" || key === "ArrowDown" || key === "Tab" || key === " " || key == "Backspace" || key == "Numpad7") {
+            erasePasswordAndInfo();
+        }
+    }
+});
 
 function checkPasswordKeyGroup() {
     let password = password_Input.value;
